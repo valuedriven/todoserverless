@@ -63,8 +63,10 @@ export default function SignupPage() {
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input type="text" id="email" name="email" required />
+        <br />
         <label htmlFor="password">Password</label>
         <input type="text" id="password" name="password" required />
+        <br />
         <label htmlFor="confirmPassword">Confirm password</label>
         <input
           type="text"
@@ -72,6 +74,7 @@ export default function SignupPage() {
           name="confirmPassword"
           required
         />
+        <br />
         <button type="submit">Submit</button>
       </form>
     );

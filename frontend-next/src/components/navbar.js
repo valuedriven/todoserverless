@@ -14,8 +14,8 @@ export default function Navbar({ children }) {
   return (
     <>
       <Link href="/">Home</Link>
-      <Link href="/profile" hidden={!isAuthenticated}>
-        Profile
+      <Link href="/notes" hidden={!isAuthenticated}>
+        Notes
       </Link>
       <Link href="/signup" hidden={isAuthenticated}>
         Signup

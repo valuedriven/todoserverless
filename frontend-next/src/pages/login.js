@@ -29,8 +29,10 @@ export default function LoginPage() {
     <form onSubmit={handleSubmit}>
       <label htmlFor="email">Email</label>
       <input type="text" id="email" name="email" required />
+      <br />
       <label htmlFor="password">Password</label>
       <input type="text" id="password" name="password" required />
+      <br />
       <button type="submit">Submit</button>
     </form>
   );
