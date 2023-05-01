@@ -5,25 +5,30 @@ import { invokeApig } from '@/libs/aws-lib';
 export default function Notes() {
   const [notes, setNotes] = useState([]);
 
-  const getNotes = async () => {
-    try {
-      const jsonData = await invokeApig({ path: '/notes' });
-      setNotes(jsonData);
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
-
   useEffect(() => {
-    getNotes();
+    async function fetchData() {
+      try {
+        const data = await invokeApig({ path: '/notes' });
+        setNotes(data);
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    fetchData();
   }, []);
-
-  console.log('rendering...');
 
   return (
     <div>
-      <Link href="/new-note">New note</Link>
+      <Link href="/notes/-1">New note</Link>
       <br />
+      <NotesList notes={notes} />
+    </div>
+  );
+}
+
+function NotesList({ notes }) {
+  return (
+    <>
       {notes.map((note, key) => {
         return (
           <p key={key}>
@@ -31,6 +36,6 @@ export default function Notes() {
           </p>
         );
       })}
-    </div>
+    </>
   );
 }
