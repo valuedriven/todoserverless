@@ -76,7 +76,6 @@ async function insertNote(event) {
     const uploadedFilename = newNote.attachment.value
       ? (await s3Upload(newNote.attachment.files[0])).Location
       : null;
-
     await createNote({
       content: newNote.content,
       attachment: uploadedFilename,

@@ -1,4 +1,5 @@
-export default {
+const object = {
+  REGION: 'us-east-1',
   cognito: {
     REGION: 'us-east-1',
     USER_POOL_ID: 'us-east-1_Y8ktqOqoY',
@@ -14,3 +15,5 @@ export default {
   },
   MAX_ATTACHMENT_SIZE: 5000000,
 };
+
+export default object;

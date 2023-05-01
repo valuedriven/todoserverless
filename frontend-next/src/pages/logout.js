@@ -1,7 +1,7 @@
 import { UserContextData } from '@/context/user-context';
 import { useContext } from 'react';
 
-export function LogoutPage() {
+export default function LogoutPage() {
   const { setIsAuthenticated } = useContext(UserContextData);
   const handleSubmit = async (event) => {
     event.preventDefault();

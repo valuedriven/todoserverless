@@ -11,3 +11,4 @@ Otimizar renderização de componentes Notes e NotesList
 Implementar restante de lógica CRUD - editar e excluir nota: https://branchv125--serverless-stack.netlify.app/chapters/render-the-note-form.html
 Restringir acesso a urls a usuário logado
 Redirecionar para login
+Atualizar versão do aws-sdk
